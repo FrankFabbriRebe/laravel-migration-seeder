@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+// include Train model
+use App\Models\Train;
+
 class MainController extends Controller
 {
 
