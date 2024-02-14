@@ -22,8 +22,8 @@ class TrainFactory extends Factory
             'stazione_di_arrivo' => fake()->city,
             'orario_di_partenza' => fake()->time('H:i'),
             'orario_di_arrivo' => fake()->time('H:i'),
-            'codice_treno' => fake()->numberBetween(10000, 99999),
-            'numero_carrozze' => fake()->randomDigitNotNull,
+            'codice_treno' => fake()->unique()->numerify('train-#####'),
+            'numero_carrozze' => fake()->numberBetween(5, 20),
             'in_orario' => fake()->boolean(),
             'cancellato' => fake()->boolean(),
         ];
